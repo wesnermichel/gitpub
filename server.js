@@ -25,9 +25,11 @@ app.get("/drinks/:id", (req, res) => {
   let drink = drinks[req.params.id];
   res.render("drinks_show", { drink });
   console.log(drink)
- 
 });
 
+app.get("/drinks",(req,res) => {
+  res.send(drinks.params)
+});
 
 app.get("/foods/:id", (req, res) => {
   let food = foods("req.params.id");
