@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.send("Welcome to GitPub");
 });
-// drink = drinks[i].name.charAt(0,1).toUpperCase() + drinks[i].name.slice(1)
+
 //INDEX ROUTE
 app.get("/drinks", (req, res) => {
   res.render("drinks_index", { drinks });
@@ -23,13 +23,22 @@ app.get("/food", (req, res) => {
 //SHOW ROUTE
 app.get("/drinks/:id", (req, res) => {
   let drink = drinks[req.params.id];
-  res.render("drinks_show", { drink });
-  console.log(drink)
+  res.render("drinks_show", { show: drink });
+  console.log("console", drink);
+});
+app.get("/foods/:id", (req, res) => {
+  let drink = foodss[req.params.id];
+  res.render("foods_show", { show: drink });
+  console.log("console", drink);
 });
 
-app.get("/drinks",(req,res) => {
-  res.send(drinks.params)
+app.get("/drinks", (req, res) => {
+  res.send(drinks.params);
 });
+app.get("/foods", (req, res) => {
+  res.send(foods.params);
+});
+//drink = drinks[i].name.charAt(0,1).toUpperCase() + drinks[i].name.slice(1)
 
 app.get("/foods/:id", (req, res) => {
   let food = foods("req.params.id");
