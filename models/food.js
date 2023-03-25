@@ -1,4 +1,4 @@
-const food = [
+const foods = [
     {
       name: '(req, rEscargot)',
       price: 12,
@@ -35,4 +35,4 @@ const food = [
       image: 'https://i.imgur.com/QZW3gJg.jpg'
     }
   ]
-  module.exports =  food
+  module.exports =  foods
