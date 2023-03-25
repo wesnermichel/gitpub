@@ -10,21 +10,42 @@
         background-color: steelblue;
         text-align: center;
       }
+      a {
+         color:white;
+      }
+      li {
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
     <h1>Welcome to gitPub</h1>
     <ul>
+    
       <% for (let i = 0; i < drinks.length; i++) { %>
+      <li>
       <a href=" http://localhost:3000/drinks/<%= i %>"> <%=drinks[i].name.toUpperCase() %></a>
       <h3>Price: <%= drinks[i].price %></h3>
       <img src="<%= drinks[i].image %>" />
+      </li>
       <% } %>
     </ul>
   </body>
   <script type="text/javascript">
-let capitalizedWords=> {
+  const capitalizedWords = (nameArray) => {
+    //break up by space
+    let newString.split(' ');
+    //upercase each letter in array 
+    newString.map(word => word[0].toUpperCase() + word.slice(1));
+    //join array
+    newString.join(' ');
+  return newString;
+    
+
+
+
+
+  return(nameArray)
 }
-  ;
   </script>
 </html>
